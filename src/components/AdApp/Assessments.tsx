@@ -43,7 +43,7 @@ const { Stigma, Depression, Anxiety, Worry, Optimism, PostTraumaticStress } = as
 
 
 export interface Props {
-  cols: number; 
+  cols: number;
   basePath: number;
   history: any;
   appPage: AppPageInterface;
@@ -66,14 +66,16 @@ const Assessments: React.SFC<Props> = (props) => {
   // onAssessmentMounted={handleAssessmentMounted()}
 
   return(
-    <AssessmentsList onCancel={handleCancel()} cols={cols} >
-      <Stigma />
-      <Depression />
-      <Anxiety />
-      <Worry />
-      <Optimism />
-      <PostTraumaticStress />
-    </AssessmentsList>
+    <div style={{margin: 5}}>
+      <AssessmentsList onCancel={handleCancel()} cols={cols} >
+        <Stigma />
+        <Depression />
+        <Anxiety />
+        <Worry />
+        <Optimism />
+        <PostTraumaticStress />
+      </AssessmentsList>
+    </div>
   );
 
 }

@@ -45,7 +45,8 @@ export interface Props{
 const VideosList: React.SFC<Props> = (props) => {
   const {videos, cols,onClick} = props;
 
-  return <GridList
+  return(<div style={{margin: 5}}>
+    <GridList
         cols={cols}
       >
 
@@ -62,6 +63,8 @@ const VideosList: React.SFC<Props> = (props) => {
 
         ))}
       </GridList>
+      </div>
+    );
 
 }
 
